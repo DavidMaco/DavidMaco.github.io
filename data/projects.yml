@@ -100,6 +100,105 @@
   repo_url: "https://github.com/DavidMaco/Supplier_Selection_Project"
   demo_url: "https://supplierselectionproject.streamlit.app/"
 
+- id: procurement-spend-analysis
+  title: "Spend IQ"
+  subtitle: "Procurement Spend Analysis & Supplier Optimization"
+  tagline: "End-to-end spend intelligence platform with Monte Carlo simulation, constrained optimization, scenario analysis, and a 6-page Streamlit Cloud dashboard."
+  domain: "Procurement Analytics"
+  color: "#0F766E"
+  gradient: "from-teal-600 to-emerald-400"
+  status: "Production-Ready"
+  problem_statement: >
+    Procurement teams sit on rich transactional data but lack the decision
+    intelligence to quantify price leakage, supplier risk, and savings opportunities
+    across categories. Insights are trapped in spreadsheets, manual reports are
+    stale, and leadership cannot see a single coherent view of NGN 310B+ in annual
+    spend across 40 suppliers and 71 materials.
+  solution_summary: >
+    A full-stack spend intelligence platform that ingests company CSV extracts (or
+    generates realistic synthetic FMCG data), normalizes schemas with alias mapping,
+    runs price-variance analysis, score-based supplier optimization, linear-constrained
+    allocation, 10,000-path Monte Carlo simulation, and 3-scenario sensitivity analysis,
+    then surfaces results through a 6-page interactive Streamlit Cloud dashboard with
+    one-click Power BI export pack generation.
+  architecture_summary: >
+    Data flows from CSV ingestion (upload or generation) through a normalization layer
+    with canonical schema alias mapping into an analytics engine (price variance, supplier
+    scoring, constrained optimization, Monte Carlo, scenario analysis). Results are surfaced
+    via a 6-page Streamlit multipage dashboard with shared UI helpers, and exported as a
+    Power BI deployment pack with DAX measures, theme, and field mapping.
+  architecture_layers:
+    - name: "Data Ingestion"
+      description: "Synthetic FMCG generator, company CSV upload with canonical alias mapping, bundled demo dataset"
+      tech: "Python, pandas"
+    - name: "Normalization"
+      description: "CANONICAL_SCHEMAS alias resolution, upload validation, size/row guards, quality diagnostics"
+      tech: "pandas, logging"
+    - name: "Analytics Engine"
+      description: "Price variance, supplier scoring, constrained LP allocation, 10K-path Monte Carlo, 3-scenario sensitivity"
+      tech: "NumPy, pandas"
+    - name: "Dashboard Layer"
+      description: "6-page multipage Streamlit app with shared UI helpers, real-time filtering, and styled Plotly charts"
+      tech: "Streamlit, Plotly"
+    - name: "Export / BI Handoff"
+      description: "One-click Power BI deployment pack with DAX measures, theme JSON, field mapping, and .pbit starter spec"
+      tech: "Python, ZIP, Power BI"
+  business_impact:
+    - "NGN 310B+ total spend analyzed across 4 procurement categories and 40 suppliers"
+    - "NGN 185.9B total savings opportunity identified (59.9% of spend)"
+    - "NGN 18.5B price standardization opportunity via material-level price-variance analysis"
+    - "Constrained supplier allocation respecting capacity, lead-time, and risk bounds"
+    - "10,000-path Monte Carlo with P05/P50/P95 savings uncertainty quantification"
+    - "NGN 40.6B maverick spend exposure flagged (13.1% of spend)"
+  stack:
+    - "Python 3.11+"
+    - "Streamlit"
+    - "Plotly"
+    - "pandas / NumPy"
+    - "SQLite"
+    - "Power BI"
+    - "pytest"
+    - "GitHub Actions"
+  highlights:
+    - label: "Spend"
+      value: "₦310B+"
+    - label: "Savings"
+      value: "₦186B"
+    - label: "Tests"
+      value: "28"
+    - label: "Pages"
+      value: "6"
+  key_features:
+    - "3 data modes: bundled demo, configurable synthetic generation, company CSV upload"
+    - "Canonical schema alias mapping auto-resolves vendor_name → supplier_name, etc."
+    - "Score-based supplier optimization with composite quality/cost/delivery scoring"
+    - "Constrained allocation engine respecting capacity, lead-time, and risk constraints"
+    - "10,000-path Monte Carlo simulation with P05/P50/P95 savings bounds"
+    - "One-click Power BI export: CSVs, DAX measures, theme, field mapping, .pbit spec"
+  dashboard_pages:
+    - page: "Executive Overview"
+      icon: "monitor"
+      description: "Spend by category, KPI summary table, monthly trend, and scenario savings outlook with total savings metrics."
+      metrics: ["Total Spend", "Savings %", "Trend", "Scenarios"]
+    - page: "Supplier Performance"
+      icon: "target"
+      description: "Supplier scorecard table, OTD vs quality cost scatter, performance-grade distribution, and top-15 suppliers by spend."
+      metrics: ["OTD %", "Quality Cost", "Grade", "Spend Rank"]
+    - page: "Savings Opportunities"
+      icon: "zap"
+      description: "Price-variance top-15, optimization recommendations, constrained sourcing plan, and scenario savings summary."
+      metrics: ["Variance ₦", "Score", "Alloc %", "Scenario"]
+    - page: "Risk & Uncertainty"
+      icon: "layers"
+      description: "Maverick spend by risk level, FX exposure, Monte Carlo P05/P50/P95 savings bands, and uncertainty bounds table."
+      metrics: ["Maverick ₦", "FX Vol", "P05", "P95"]
+    - page: "Data Hub"
+      icon: "code"
+      description: "Data quality report, upload schema reference, Power BI pack download, and normalized raw table preview."
+      metrics: ["Quality", "Schema", "PBI Pack", "Raw"]
+  repo_url: "https://github.com/DavidMaco/Procurement_Spend_Analysis"
+  demo_url: "https://procurementspendanalysis.streamlit.app/"
+
 - id: pvis
   title: "PVIS"
   subtitle: "Procurement Volatility Intelligence System"
